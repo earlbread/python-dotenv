@@ -1,4 +1,4 @@
-from __future__ import print_function
+from __future__ import print_function, unicode_literal
 from .main import load_dotenv, find_dotenv
 
 from IPython.core.magic import Magics, magics_class, line_magic

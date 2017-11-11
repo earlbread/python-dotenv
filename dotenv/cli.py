@@ -1,3 +1,4 @@
+from __future__ import unicode_literal
 import os
 
 import click

@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-from __future__ import absolute_import
+from __future__ import absolute_import, unicode_literals
 
 import codecs
-import io
 import os
 import sys
 import warnings
@@ -97,7 +96,7 @@ def dotenv_values(dotenv_path):
 
 
 def parse_dotenv(dotenv_path):
-    with io.open(dotenv_path, encoding='utf-8') as f:
+    with open(dotenv_path, encoding='utf-8') as f:
         for line in f:
             line = line.strip()
             if not line or line.startswith('#') or '=' not in line:
@@ -140,7 +139,7 @@ def resolve_nested_variables(values):
 
 
 def flatten_and_write(dotenv_path, dotenv_as_dict, quote_mode="always"):
-    with io.open(dotenv_path, "w", encoding='utf-8') as f:
+    with open(dotenv_path, "w", encoding='utf-8') as f:
         for k, v in dotenv_as_dict.items():
             _mode = quote_mode
             if _mode == "auto" and " " in v:
