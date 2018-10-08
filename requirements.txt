@@ -5,5 +5,5 @@ bumpversion
 wheel
 pytest-cov
 click
-ipython
+ipython<6.0
 pypandoc
